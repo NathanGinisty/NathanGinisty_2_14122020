@@ -1,4 +1,4 @@
-.header {
+header {
     display: grid;
     align-items: center;
     max-width: 1400px;
@@ -12,6 +12,7 @@
     font-family: "Dancing Script", cursive;
     color: rgba(0, 100, 215,1);
     font-size: large;
+    padding: 0 2rem;
 }
 
 .navigation {
@@ -35,11 +36,6 @@
     text-decoration: none;
 }
 
-@media screen and (max-width: 1440px) { /* Régler autremement par la suite*/
-    .logo {
-        padding: 0 2rem;
-    }
-}
 
 @media screen and (max-width: 600px) {
     .header {
@@ -54,7 +50,4 @@
         width: 50%;
     }
     
-    .logo {
-        padding: 0 2rem;
-    }
 }
