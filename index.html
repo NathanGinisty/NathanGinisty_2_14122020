@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <title>Reservia</title>
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
   <script src="myscript.js"></script>
@@ -12,13 +11,13 @@
   <div id="contenu">
     
     <!------------------- HEADER ------------------->
-    <header>
-      <div class="logo"><h1>Reservia</h1></div>
+    <header class="header">
+      <h1 class="logo">Reservia</h1>
       <nav class="navigation">
         <a class="navLink" href="#hébergements">Hébergement</a>
         <a class="navLink" href="#activités">Activités</a>
       </nav>
-      <a class="navLinkRegister" href="#hébergements">S'inscrire</a>
+      <a class="navLinkRegister" href="#">S'inscrire</a>
     </header>
     
     <main>
@@ -131,44 +130,42 @@
       
       
       <!------------------- SECTION: Activités à Marseille ------------------->
-      <section class="activités" id="activités">
-        <br/>
-        <h3 class="x-large">Activités à Marseille</h3>
-        <div class="gridActivité">
-          <div class="blockActivité">
-            <img class="img-activité" src="img/calanques.jpg">
-            <h4 class="large"><div class="nameActivité">Vieux Port</div></h4>
-          </div>
-          <div class="blockActivité">
-            <img class="img-activité" src="img/calanques.jpg">
-            <h4 class="large"><div class="nameActivité">Fort de Pomègues</div></h4>
-          </div>
-          <div class="blockActivité">
-            <img class="img-activité" src="img/calanques.jpg">
-            <h4 class="large"><div class="nameActivité">Île du Frioul</div></h4>
-          </div>
-          <div class="blockActivité">
-            <img class="img-activité" src="img/calanques.jpg">
-            <h4 class="large"><div class="nameActivité">Parc National des Calanques</div></h4>
-          </div>
-          <div class="blockActivité">
-            <img class="img-activité" src="img/calanques.jpg">
-            <h4 class="large"><div class="nameActivité">Notre-Dame-de-la-Garde</div></h4>
-          </div>
-          <div class="blockActivité">
-            <img class="img-activité" src="img/calanques.jpg">
-            <h4 class="large"><div class="nameActivité">Parc Longchamp</div></h4>
-          </div>
-        </div>
+      <section class="activity" id="activity">
+        <h2 class="activityTitle">Activités à Marseille</h2>
+        <a href="#" class="blockActivity">
+          <div class="img-activity"><img class="img-activity-cropped" src="img/calanques.jpg"></div>
+          <h3 class="nameActivity">Vieux Port</h3>
+        </a>
+        <a href="#" class="blockActivity">
+          <div class="img-activity"><img class="img-activity-cropped" src="img/calanques.jpg"></div>
+          <h3 class="nameActivity">Fort de Pomègues</h3>
+        </a>
+        <a href="#" class="blockActivity">
+          <div class="img-activity"><img class="img-activity-cropped" src="img/calanques.jpg"></div>
+          <h3 class="nameActivity">Parc National des Calanques</h3>
+        </a>
+        <a href="#" class="blockActivity">
+          <div class="img-activity"><img class="img-activity-cropped" src="img/calanques.jpg"></div>
+          <h3 class="nameActivity">Notre-Dame-de-la-Garde</h3>
+        </a>
+        <a href="#" class="blockActivity">
+          <div class="img-activity"><img class="img-activity-cropped" src="img/calanques.jpg"></div>
+          <h3 class="nameActivity">Île du Frioul</h3>
+        </a>
+        <a href="#" class="blockActivity">
+          <div class="img-activity"><img class="img-activity-cropped" src="img/calanques.jpg"></div>
+          <h3 class="nameActivity">Parc Longchamp</h3>
+        </a>
       </section>
       
       <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
       
     </main>
     
-    
-    <!------------------- FOOTER ------------------->
-    <footer>
+    <!--------------------------------------------------->
+    <!--------------------- FOOTER ---------------------->
+    <!--------------------------------------------------->
+    <footer class="footer">
       <div class="footer-content">
         <div class="conteneur-flexbox" class>
           <div class="footer-section Apropos">
@@ -195,7 +192,6 @@
           </div>
         </div>
       </div>
-      
     </footer>
     
   </div>

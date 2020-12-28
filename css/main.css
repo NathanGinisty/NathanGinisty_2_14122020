@@ -40,7 +40,301 @@ main {
 }
 
 
-/* ------------------------------- Font Classes ------------------------------- */
+
+
+/* Image */
+.img-ad {
+  width: 100%;
+  height: auto;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+
+
+.img-side-ad {
+  height: 117px; /* temporaire à rendre dynamique*/
+  width: auto;
+  
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  
+  vertical-align:inherit;
+  float:left;
+
+  margin-right:1rem;
+}
+
+.img-small-icon {
+  height: 20px;
+  width: auto;
+  
+  vertical-align:middle;
+  
+  float: left;
+  margin-right: 0.5rem;
+}
+
+/* Alignment Classes */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.centerflex-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centerflex-left-div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.sideflex-div {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.conteneur-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+}
+
+
+
+.item {
+  flex-grow: 2;
+  flex-shrink: 2;
+  flex-basis: auto;
+}
+
+/* Quotes */
+.quote {
+  background: whitesmoke;
+  margin: 1rem 1rem 1rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+  
+  box-shadow: 2px 2px 5px lightgrey;
+}
+
+.quote-two-thirds {
+  background: rgb(238, 238, 238);
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.quote-one-thirds {
+  background: rgb(238, 238, 238);
+}
+
+.quote-ad {
+  background: white;
+  width: 30%;
+  /*min-width: 248px;
+  max-width: 248px;*/
+  margin: 0.3rem;
+  padding: 0.3rem;
+}
+
+.quote-side-ad {
+  background: white;
+  height: 30%;
+  margin: 0.3rem;
+  padding: 0.3rem;
+}
+
+.quote-filtre-search {
+  background: white;
+  border: solid 2px;;
+  border-color: lightgrey;
+  border-radius: 25px;
+  margin: 0.5rem 0 0.5rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  box-shadow: 0px 0px 0px lightgrey
+}
+
+.quote-panel-search {
+  background: white;
+  border: solid 1px;;
+  border-color: lightgrey;
+  width: fit-content;
+  margin: 0 0.5rem 1rem 0;
+  padding: 0.7rem;
+  box-shadow: 0px 0px 0px lightgrey
+}
+
+/* ------------------------------------------------------------ */
+/* -------------------------- Header -------------------------- */
+/* ------------------------------------------------------------ */
+
+header {
+  display: grid;
+  align-items: center;
+  max-width: 1400px;
+  margin: auto;
+  
+  grid-template-columns: auto 1fr auto auto;
+  grid-template-areas: "logo . navbar register";
+}
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  color: rgba(0, 100, 215,1);
+  font-size: xx-large;
+  padding: 0 2rem;
+}
+
+.navigation {
+  grid-area: navbar;
+  display: flex;
+  align-items: center;
+}
+.navLink {
+  padding: 2rem;
+  text-align: center;
+  color: rgba(0, 100, 215,1);
+  text-decoration: none;
+}
+
+.navLinkRegister {
+  grid-area: register;
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  color: rgba(0, 100, 215,1);
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .header {
+      grid-template-columns: auto 1fr auto;
+      grid-template-areas:
+      "logo . register"
+      "navbar navbar navbar";
+  } 
+  
+  .navLink {
+      border-top: none;
+      border-bottom: 3px solid #F2F2F2;
+      width: 50%;
+  }
+  
+}
+
+
+/* ------------------------------------------------------------ */
+/* ------------------------- Activité ------------------------- */
+/* ------------------------------------------------------------ */
+
+.activity {
+  margin: 2rem 0 0 0;
+  display: grid;
+  text-decoration: none;
+}
+
+.activityTitle {
+  margin: 0 0 1rem 0;
+  grid-column: 1/-1;
+}
+
+.blockActivity {
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px lightgrey;
+  margin: 0.3rem;
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+}
+
+.img-activity {
+  position: relative;
+  flex: 1;
+}
+.img-activity-cropped {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  object-fit: cover;
+}
+.nameActivity {
+  padding: 0.5rem 0.5rem;
+}
+
+@media (min-width: 1000px) {
+  .activity {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto 18rem 18rem 18rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .activity {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto 16rem 16rem 16rem;
+  }
+}
+@media (max-width: 600px) {
+  .activity {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 16rem 16rem 16rem 16rem 16rem 16rem;
+  }
+}
+
+
+/* ------------------------------------------------------------ */
+/* -------------------------- Footer -------------------------- */
+/* ------------------------------------------------------------ */
+
+footer {
+  background: whitesmoke;
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.nav-footer {
+  list-style-type: none;
+  margin: 0 0 0 0;
+  padding: 2rem 0 0 0;
+}
+
+.nav-footer li {
+  
+  font-size: 15px;
+  padding: 0.5rem 0;
+}
+
+.nav-footer a {
+  color: black;
+  text-decoration: none;
+}
+
+
+/* ------------------------------------------------------------ */
+/* ---------------- Fonts, size and others...  ---------------- */
+/* ------------------------------------------------------------ */
+
 .font-abel {
   font-family: "Abel", sans-serif;
 }
@@ -153,216 +447,4 @@ h6 {
 p {
   margin-bottom: 0.4rem;
   display: block;
-}
-
-/* Image */
-.img-ad {
-  width: 100%;
-  height: auto;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-}
-
-
-
-.img-side-ad {
-  height: 117px; /* temporaire à rendre dynamique*/
-  width: auto;
-  
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  
-  vertical-align:inherit;
-  float:left;
-
-  margin-right:1rem;
-}
-
-.img-small-icon {
-  height: 20px;
-  width: auto;
-  
-  vertical-align:middle;
-  
-  float: left;
-  margin-right: 0.5rem;
-}
-
-/* Crop Image */
-figure{
-  width:120px;
-  overflow:hidden; /*hide bounds of image */
-  margin:0;   /*reset margin of figure tag*/
-}
-figure img{
-  display:block; /*remove inline-block spaces*/
-  width:100%; /*make image streatch*/
-  margin:0 0 0 0;
-  
-}
-
-/* Alignment Classes */
-.text-left {
-  text-align: left;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-justify {
-  text-align: justify;
-}
-
-.centerflex-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.centerflex-left-div {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
-
-.sideflex-div {
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
-}
-
-.conteneur-flexbox {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-evenly;
-}
-
-
-
-.item {
-  flex-grow: 2;
-  flex-shrink: 2;
-  flex-basis: auto;
-}
-
-/* Quotes */
-.quote {
-  background: whitesmoke;
-  margin: 1rem 1rem 1rem 0;
-  padding: 1rem;
-  border-radius: 10px;
-  
-  box-shadow: 2px 2px 5px lightgrey;
-}
-
-.quote-two-thirds {
-  background: rgb(238, 238, 238);
-  padding: 1rem 1rem 1rem 1rem;
-}
-
-.quote-one-thirds {
-  background: rgb(238, 238, 238);
-}
-
-.quote-ad {
-  background: white;
-  width: 30%;
-  /*min-width: 248px;
-  max-width: 248px;*/
-  margin: 0.3rem;
-  padding: 0.3rem;
-}
-
-.quote-side-ad {
-  background: white;
-  height: 30%;
-  margin: 0.3rem;
-  padding: 0.3rem;
-}
-
-.quote-filtre-search {
-  background: white;
-  border: solid 2px;;
-  border-color: lightgrey;
-  border-radius: 25px;
-  margin: 0.5rem 0 0.5rem 1rem;
-  padding: 0.5rem 1rem 0.5rem 0.5rem;
-  box-shadow: 0px 0px 0px lightgrey
-}
-
-.quote-panel-search {
-  background: white;
-  border: solid 1px;;
-  border-color: lightgrey;
-  width: fit-content;
-  margin: 0 0.5rem 1rem 0;
-  padding: 0.7rem;
-  box-shadow: 0px 0px 0px lightgrey
-}
-
-/* ------------------------------------------------------------ */
-/* ------------------------- Activité ------------------------- */
-/* ------------------------------------------------------------ */
-
-.gridActivité {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: stretch;
-  align-items: stretch;
-}
-
-.blockActivité {
-  background: white;
-  margin: 0.3rem;
-  padding: 0.3rem;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px lightgrey;
-
-  flex-grow:1;
-  box-sizing: border-box;
-}
-
-.img-activité {
-  width: fit-content;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-}
-
-.nameActivité {
-  padding: 0.5rem 1rem;
-}
-
-
-/* ------------------------------------------------------------ */
-/* -------------------------- Footer -------------------------- */
-/* ------------------------------------------------------------ */
-
-footer {
-  background: whitesmoke;
-  height: 200px;
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-}
-
-.nav-footer {
-  list-style-type: none;
-  margin: 0 0 0 0;
-  padding: 2rem 0 0 0;
-}
-
-.nav-footer li {
-  
-  font-size: 15px;
-  padding: 0.5rem 0;
-}
-
-.nav-footer a {
-  color: black;
-  text-decoration: none;
 }
