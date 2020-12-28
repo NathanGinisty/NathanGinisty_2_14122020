@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Reservia",
-            "file": "c:\\Users\\natha\\Documents\\WebDevProject\\Reservia\\index.html"
+            "file": "${file}\\..\\index.html"
         }
     ]
 }

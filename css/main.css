@@ -30,7 +30,7 @@ main {
   height: 100%;
   width: auto;
   max-width: 1400px;
-
+  
   box-sizing: border-box;
 }
 
@@ -61,7 +61,7 @@ main {
   
   vertical-align:inherit;
   float:left;
-
+  
   margin-right:1rem;
 }
 
@@ -159,15 +159,7 @@ main {
   padding: 0.3rem;
 }
 
-.quote-filtre-search {
-  background: white;
-  border: solid 2px;;
-  border-color: lightgrey;
-  border-radius: 25px;
-  margin: 0.5rem 0 0.5rem 1rem;
-  padding: 0.5rem 1rem 0.5rem 0.5rem;
-  box-shadow: 0px 0px 0px lightgrey
-}
+
 
 .quote-panel-search {
   background: white;
@@ -193,6 +185,12 @@ header {
   grid-template-areas: "logo . navbar register";
 }
 
+.navigation {
+  grid-area: navbar;
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   font-family: "Dancing Script", cursive;
   color: rgba(0, 100, 215,1);
@@ -200,11 +198,18 @@ header {
   padding: 0 2rem;
 }
 
-.navigation {
-  grid-area: navbar;
-  display: flex;
-  align-items: center;
+.logo:hover {
+  transition-duration: 0.3s;
+  transform: scale(1.5);
+  padding: 0 3.5rem
 }
+
+.logo:not(hover) {
+  transition-duration: 0.3s;
+  transform: scale(1);
+  padding: 0 2rem;
+}
+
 .navLink {
   padding: 2rem;
   text-align: center;
@@ -221,25 +226,55 @@ header {
   text-decoration: none;
 }
 
+@media (min-width: 601px) {
+  .navLink:hover {
+    border-top: 3px solid rgba(0, 100, 215,1);
+  }
+
+  .navLink {
+    border-top: 3px solid #F2F2F2;
+  }
+}
+
 @media (max-width: 600px) {
   .header {
-      grid-template-columns: auto 1fr auto;
-      grid-template-areas:
-      "logo . register"
-      "navbar navbar navbar";
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+    "logo . register"
+    "navbar navbar navbar";
   } 
   
   .navLink {
-      border-top: none;
-      border-bottom: 3px solid #F2F2F2;
-      width: 50%;
+    border-bottom: 3px solid #F2F2F2;
+    width: 50%;
   }
   
+  .navLink:hover {
+    border-bottom: 3px solid rgba(0, 100, 215,1);
+  }
+}
+
+/* ------------------------------------------------------------ */
+/* -------------------------- Filter -------------------------- */
+/* ------------------------------------------------------------ */
+
+.block-filter-search {
+  background: white;
+  border: solid 2px;;
+  border-color: lightgrey;
+  border-radius: 25px;
+  margin: 0.5rem 0 0.5rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+}
+
+.block-filter-search:hover {
+  transition-duration: 0.1s;
+  transform: scale(1.05);
 }
 
 
 /* ------------------------------------------------------------ */
-/* ------------------------- Activité ------------------------- */
+/* ------------------------- Activity ------------------------- */
 /* ------------------------------------------------------------ */
 
 .activity {
@@ -264,6 +299,11 @@ header {
   color: black;
 }
 
+.blockActivity:hover {
+  transition-duration: 0.25s;
+  transform: scale(1.05);
+}
+
 .img-activity {
   position: relative;
   flex: 1;
@@ -282,21 +322,21 @@ header {
 
 @media (min-width: 1000px) {
   .activity {
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: auto 18rem 18rem 18rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 18rem 18rem 18rem;
   }
 }
 
 @media (max-width: 1000px) {
   .activity {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto 16rem 16rem 16rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 16rem 16rem 16rem;
   }
 }
 @media (max-width: 600px) {
   .activity {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto 16rem 16rem 16rem 16rem 16rem 16rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 16rem 16rem 16rem 16rem 16rem 16rem;
   }
 }
 
@@ -328,6 +368,12 @@ footer {
 .nav-footer a {
   color: black;
   text-decoration: none;
+}
+
+.flexbox-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
 }
 
 
