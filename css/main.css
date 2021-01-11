@@ -98,11 +98,7 @@ main {
   align-items: center;
 }
 
-.centerflex-left-div {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
+
 
 .sideflex-div {
   display: flex;
@@ -230,7 +226,7 @@ header {
   .navLink:hover {
     border-top: 3px solid rgba(0, 100, 215,1);
   }
-
+  
   .navLink {
     border-top: 3px solid #F2F2F2;
   }
@@ -254,9 +250,61 @@ header {
   }
 }
 
+/* ------------------------------------------------------------ */ 
+/* ------------------------ Search Bar ------------------------ */
 /* ------------------------------------------------------------ */
+
+.search-bar {
+  background: white;
+  border: solid 0.5px;;
+  border-color: lightgrey;
+  border-radius: 15px;
+  margin: 1rem 0;
+  width: 400px;
+}
+
+.search-bar input[type=search] {
+  padding: 12px 10px 12px 20px;
+  font-size: 16px;
+  font-weight:bold;
+  border: none;
+}
+
+.search-bar button[type="search"] {
+  float: right;
+  background: rgba(0, 100, 215,1);
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  
+  width: 133px;
+  height: 42px;
+}
+
+.icon-getposition {
+  height: 20px;
+}
+/*
+
+
+*/
+
+/* ------------------------------------------------------------ */ 
 /* -------------------------- Filter -------------------------- */
 /* ------------------------------------------------------------ */
+
+/*
+Pas fini, je dois revoir la mise en page dynamique pour du mobile
+*/
+
+.centerflex-left-div { /*A rename*/
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
 
 .block-filter-search {
   background: white;
@@ -300,8 +348,8 @@ header {
 }
 
 .blockActivity:hover {
-  transition-duration: 0.25s;
-  transform: scale(1.05);
+  transition-duration: 0.2s;
+  transform: scale(1.03);
 }
 
 .img-activity {
