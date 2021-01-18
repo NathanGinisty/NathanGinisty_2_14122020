@@ -277,24 +277,30 @@ header {
 /* -------------------- Les plus populaires ------------------- */
 /* ------------------------------------------------------------ */
 
-.block-one-thirds {
+.block-popular {
   background: rgb(238, 238, 238);
+}
+
+.container-side-ads {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
 }
 
 .block-side-ad {
   background: white;
-  margin: 0.3rem;
-  padding: 0.3rem;
+  margin: 5px;
+  padding: 5px;
   height: 120px;
+  width: 30%
 }
 
 .img-side-ad {
-  height: 120px; /* temporaire à rendre dynamique*/
+  height: 120px;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  vertical-align:inherit;
   float:left;
-  margin-right:1rem;
+  margin-right:16px;
 }
 
 @media (min-width: 1000px) {
@@ -302,9 +308,27 @@ header {
 }
 
 @media (max-width: 1000px) {
+  .block-side-ad {
+    height: 120px;
+    width: 30%
+  }
+
+  .img-side-ad {
+    height: 120px;
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
+  .block-side-ad {
+    background:red;
+    height: 180px;
+    width: 95%
+  }
+
+  .img-side-ad {
+    width: 30%;
+    height: auto;
+  }
 }
 
 /* ------------------------------------------------------------ */
@@ -313,7 +337,7 @@ header {
 
 .block-hebergement {
   background: rgb(238, 238, 238);
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 16px;
 }
 
 .block-ad {
@@ -324,11 +348,26 @@ header {
   text-decoration: none;
 }
 
+/*
 .img-ad {
   width: 100%;
   height: auto;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
+}
+*/
+.img-ad {
+  position: relative;
+  flex: 1;
+}
+
+.img-ad-cropped {
+  /*position: absolute;*/
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  object-fit: cover;
 }
 
 .block-ad:hover {
@@ -400,6 +439,7 @@ header {
   position: relative;
   flex: 1;
 }
+
 .img-activity-cropped {
   position: absolute;
   height: 100%;
@@ -408,27 +448,28 @@ header {
   border-top-left-radius: 8px;
   object-fit: cover;
 }
+
 .nameActivity {
-  padding: 0.5rem 0.5rem;
+  padding: 8px 8px;
 }
 
 @media (min-width: 1000px) {
   .activity {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 18rem 18rem 18rem;
+    grid-template-rows: auto 288px 288px 288px;
   }
 }
 
 @media (max-width: 1000px) {
   .activity {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto 16rem 16rem 16rem;
+    grid-template-rows: auto 256px 256px 256px;
   }
 }
 @media (max-width: 600px) {
   .activity {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 16rem 16rem 16rem 16rem 16rem 16rem;
+    grid-template-rows: auto 256px 256px 256px 256px 256px 256px;
   }
 }
 
