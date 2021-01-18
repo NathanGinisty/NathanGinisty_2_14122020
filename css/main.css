@@ -342,27 +342,25 @@ header {
 
 .block-ad {
   background: white;
-  width: 30%;
+  margin: 1rem 1rem 1rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px lightgrey;
   margin: 4px;
   padding: 5px;
   text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
 }
 
-/*
-.img-ad {
-  width: 100%;
-  height: auto;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-}
-*/
 .img-ad {
   position: relative;
   flex: 1;
 }
 
 .img-ad-cropped {
-  /*position: absolute;*/
+  position: absolute;
   height: 100%;
   width: 100%;
   border-top-right-radius: 8px;
@@ -376,9 +374,7 @@ header {
 }
 
 .container-ads {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-evenly;
+  display: grid;
 }
 
 .bShowMore {
@@ -391,15 +387,24 @@ header {
   color: black;
 }
 
+@media (min-width: 1000px) {
+  .container-ads {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 288px 288px;
+  }
+}
+
 @media (max-width: 1000px) {
-  .block-ad {
-    width: 45%;
+  .container-ads {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 256px 256px 256px;
   }
 }
 
 @media (max-width: 600px) {
-  .block-ad {
-    width: 90%;
+  .container-ads {
+    grid-template-columns: 1fr;
+    grid-template-rows: 256px 256px 256px 256px 256px 256px;
   }
 }
 
