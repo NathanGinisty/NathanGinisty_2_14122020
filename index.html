@@ -25,15 +25,15 @@
       <section></br>
         <h2 class="xx-large">Trouvez votre hébergement pour des vacances de rêve</h2>
         <div style="color:grey">En plein centre ville ou en pleine nature</div></br>
-        <!-- petite quote spéciale pour simuler un carré de recherche -->
+        <!-- petite block spéciale pour simuler un carré de recherche -->
         <div class="search-bar">
           <img class="icon-getposition" src="img/icons/icon_getposition.png">
           <input type="search" placeholder="Marseille, France" name="q">
           <button type="search">Rechercher</button>
         </div>
-        <!-- filtres avec 4 petites quotes -->
-        <div class="centerflex-left-div"> <!-- a rename -->
-          <h4>Filtres</h4>
+        <!-- filtres avec 4 petites blocks -->
+        <div class="flexbox-filter">
+          <h4 class="title-filter">Filtres</h4>
           <div class="block-filter-search">
             <img class="img-small-icon" src="img/icons/icon_money.png"> Economique
           </div>
@@ -54,54 +54,55 @@
       <!------------------- SECTION: Hébergement à Marseille ------------------->
       <section>
         <div id="hébergements">
-          <div class="centerflex-div"> <!-- Try de mettre en conteneur ici 🤔 -->
-            <div class="quote quote-two-thirds" class>
+          <!--<div class="centerflex-div">--> <!-- Try de mettre en conteneur ici 🤔 --> 
+            <div class="block block-hebergement" class>
               <h3>Hébergement à Marseille</h3></br>
-              <div class="conteneur-flexbox" class>
-                <div class="quote quote-ad" class>
+              <div class="container-ads" class>
+                <a href="#" class="block block-ad">
                   <img class="img-ad" src="img/imgtest_small.png" alt="image d'appartement">
-                  <h4 class="medium">Auberge la Cannebière</h4>
+                  <h4 class="nameHebergement">Auberge la Cannebière</h4>
                   <small><div style="color:grey">Nuit à partir de 25€</div></small>
                   <div style="color:rgb(0, 100, 215)">★★★★☆</div>
-                </div>
-                <div class="quote quote-ad" class>
+                </a>
+                <a href="#" class="block block-ad">
                   <img class="img-ad" src="img/imgtest_small.png" alt="image d'appartement">
-                  <h4 class="medium">Hôtel du port</h4>
+                  <h4 class="nameHebergement">Hôtel du port</h4>
                   <small><div style="color:grey">Nuit à partir de 52€</div></small>
                   <div style="color:rgb(0, 100, 215)">★★★★★</div>
-                </div>
-                <div class="quote quote-ad" class>
+                </a>
+                <a href="#" class="block block-ad">
                   <img class="img-ad" src="img/imgtest_small.png" alt="image d'appartement">
-                  <h4 class="medium">Hôtel les mouettes</h4>
+                  <h4 class="nameHebergement">Hôtel les mouettes</h4>
                   <small><div style="color:grey">Nuit à partir de 76€</div></small>
                   <div style="color:rgb(0, 100, 215)">★★★★☆</div>
-                </div>
-                <div class="quote quote-ad" class>
+                </a>
+                <a href="#" class="block block-ad">
                   <img class="img-ad" src="img/imgtest_small.png" alt="image d'appartement">
-                  <h4 class="medium">Hôtel de la mer</h4>
+                  <h4 class="nameHebergement">Hôtel de la mer</h4>
                   <small><div style="color:grey">Nuit à partir de 46€</div></small>
                   <div style="color:rgb(0, 100, 215)">★★★☆☆</div>
-                </div>
-                <div class="quote quote-ad" class>
+                </a>
+                <a href="#" class="block block-ad">
                   <img class="img-ad" src="img/imgtest_small.png" alt="image d'appartement">
-                  <h4 class="medium">Auberge Le Panier</h4>
+                  <h4 class="nameHebergement">Auberge Le Panier</h4>
                   <small><div style="color:grey">Nuit à partir de 23€</div></small>
                   <div style="color:rgb(0, 100, 215)">★★★★☆</div>
-                </div>
-                <div class="quote quote-ad" class>
+                </a>
+                <a href="#" class="block block-ad">
                   <img class="img-ad" src="img/imgtest_small.png" alt="image d'appartement">
-                  <h4 class="medium">Hôtel chez Amina</h4>
+                  <h4 class="nameHebergement">Hôtel chez Amina</h4>
                   <small><div style="color:grey">Nuit à partir de 96€</div></small>
                   <div style="color:rgb(0, 100, 215)">★★★★★</div>
-                </div>
+                </a>
               </div>
               <br/>
-              <b class="small">Afficher plus</b>
+              <a class="bShowMore" href="#"><b class="small">Afficher plus</b></a>
             </div>
             
-            <div class="quote quote-one-thirds" class>
+            
+            <div class="block block-one-thirds" class>
               <h3>Les plus populaires</h3></br>
-              <div class="quote quote-side-ad" class>
+              <div class="block block-side-ad" class>
                 <img class="img-side-ad" src="img/imgtest_side_small.png" alt="image d'appartement">
                 <span>
                   <h4 class="medium">Hôtel Le soleil du matin</h4>
@@ -109,7 +110,7 @@
                   <div style="color:rgb(0, 100, 215)">★★★★★</div>
                 </span>
               </div>
-              <div class="quote quote-side-ad" class>
+              <div class="block block-side-ad" class>
                 <img class="img-side-ad" src="img/imgtest_side_small.png" alt="image d'appartement">
                 <span>
                   <h4 class="medium">Au coeur de l'eau Chambre d'hôtes</h4>
@@ -117,14 +118,16 @@
                   <div style="color:rgb(0, 100, 215)">★★★★☆</div>
                 </span>
               </div>
-              <div class="quote quote-side-ad" class>
+              <div class="block block-side-ad" class>
                 <img class="img-side-ad" src="img/imgtest_side_small.png" alt="image d'appartement">
                 <h4 class="medium">Hôtel Tout bleu et Blanc</h4>
                 <small><div style="color:grey">Nuit à partir de 68€</div></small>
                 <div style="color:rgb(0, 100, 215)">★★★★☆</div>
               </div>
             </div>
-          </div>
+            
+
+          <!--</div>-->
         </div>
       </section>
       

@@ -40,30 +40,10 @@ main {
 }
 
 
-
-
 /* Image */
-.img-ad {
-  width: 100%;
-  height: auto;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-}
 
 
 
-.img-side-ad {
-  height: 117px; /* temporaire à rendre dynamique*/
-  width: auto;
-  
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  
-  vertical-align:inherit;
-  float:left;
-  
-  margin-right:1rem;
-}
 
 .img-small-icon {
   height: 20px;
@@ -92,13 +72,11 @@ main {
   text-align: justify;
 }
 
-.centerflex-div {
+.centerflex-div { /* mis en commentaire pour le moment, flexbox pour cader hébergement et activité */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-
 
 .sideflex-div {
   display: flex;
@@ -106,58 +84,20 @@ main {
   align-items: center;
 }
 
-.conteneur-flexbox {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-evenly;
-}
 
-
-
-.item {
-  flex-grow: 2;
-  flex-shrink: 2;
-  flex-basis: auto;
-}
-
-/* Quotes */
-.quote {
+.block { /* base that most block uses */
   background: whitesmoke;
   margin: 1rem 1rem 1rem 0;
   padding: 1rem;
   border-radius: 10px;
-  
   box-shadow: 2px 2px 5px lightgrey;
 }
 
-.quote-two-thirds {
-  background: rgb(238, 238, 238);
-  padding: 1rem 1rem 1rem 1rem;
-}
-
-.quote-one-thirds {
-  background: rgb(238, 238, 238);
-}
-
-.quote-ad {
-  background: white;
-  width: 30%;
-  /*min-width: 248px;
-  max-width: 248px;*/
-  margin: 0.3rem;
-  padding: 0.3rem;
-}
-
-.quote-side-ad {
-  background: white;
-  height: 30%;
-  margin: 0.3rem;
-  padding: 0.3rem;
-}
 
 
 
-.quote-panel-search {
+
+.block-panel-search { /* a effacer, n'est utilisé nulpart, je le garde juste pour avoir un exemple */
   background: white;
   border: solid 1px;;
   border-color: lightgrey;
@@ -287,23 +227,20 @@ header {
 .icon-getposition {
   height: 20px;
 }
-/*
-
-
-*/
 
 /* ------------------------------------------------------------ */ 
 /* -------------------------- Filter -------------------------- */
 /* ------------------------------------------------------------ */
 
-/*
-Pas fini, je dois revoir la mise en page dynamique pour du mobile
-*/
-
-.centerflex-left-div { /*A rename*/
+.flexbox-filter {
   display: flex;
   justify-content: left;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.title-filter {
+  color: black;
 }
 
 .block-filter-search {
@@ -311,13 +248,120 @@ Pas fini, je dois revoir la mise en page dynamique pour du mobile
   border: solid 2px;;
   border-color: lightgrey;
   border-radius: 25px;
-  margin: 0.5rem 0 0.5rem 1rem;
-  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  margin: 8px 0 8px 16px;
+  padding: 8px 16px 8px 8px;
 }
 
 .block-filter-search:hover {
   transition-duration: 0.1s;
   transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .flexbox-filter {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .title-filter {
+    /*text-align: center;*/
+    font-size: x-large;
+    flex-basis: 100%;
+    height: 10;
+  }
+}
+
+/* ------------------------------------------------------------ */
+/* -------------------- Les plus populaires ------------------- */
+/* ------------------------------------------------------------ */
+
+.block-one-thirds {
+  background: rgb(238, 238, 238);
+}
+
+.block-side-ad {
+  background: white;
+  margin: 0.3rem;
+  padding: 0.3rem;
+  height: 120px;
+}
+
+.img-side-ad {
+  height: 120px; /* temporaire à rendre dynamique*/
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  vertical-align:inherit;
+  float:left;
+  margin-right:1rem;
+}
+
+@media (min-width: 1000px) {
+  /*base*/
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 600px) {
+}
+
+/* ------------------------------------------------------------ */
+/* ------------------------ Hebergement ----------------------- */
+/* ------------------------------------------------------------ */
+
+.block-hebergement {
+  background: rgb(238, 238, 238);
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.block-ad {
+  background: white;
+  width: 30%;
+  margin: 4px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.img-ad {
+  width: 100%;
+  height: auto;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.block-ad:hover {
+  transition-duration: 0.2s;
+  transform: scale(1.03);
+}
+
+.container-ads {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+}
+
+.bShowMore {
+  color:black;
+  text-decoration: none;
+}
+
+.nameHebergement {
+  font-size: medium;
+  color: black;
+}
+
+@media (max-width: 1000px) {
+  .block-ad {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .block-ad {
+    width: 90%;
+  }
 }
 
 
