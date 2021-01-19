@@ -310,15 +310,17 @@ header {
 
 .all-hebergements {
   display: grid;
-  column-gap: 32px;
-  grid-template-columns: 35% 65%;
+  column-gap: 0px;
+  grid-template-columns: 1fr 2fr;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 1250px) {
   .all-hebergements {
     grid-template-columns: 1fr;
-    row-gap: 32px;
+    row-gap: 0px;
   }
+
+
 }
 
 
@@ -341,11 +343,10 @@ header {
   background: white;
   margin: 5px;
   padding: 5px;
-  height: 120px;
 
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 10px;
 }
 
 .img-side-ad {
@@ -356,45 +357,31 @@ header {
 .img-side-ad-cropped {
   position: absolute;
   height: 100%;
-  width: 50%;
+  width: 100%;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   object-fit: cover;
-
-  float:left;
 }
 
 
 @media only screen and (min-width: 1250px) { /*3 barres l'une en dessous de l'autre a droite du bloc hébergement*/
-  .block-popular {
-    background:yellow;
-  }  
-
   .block-side-ad {
     height: 150px;
-    width: 95%
+    width: 95%;
   }
 }
 
 @media only screen and (min-width: 800px) and (max-width: 1250px) { /*3 barres l'une a cotés de l'autre*/
-  .block-popular {
-    background:orange;
-  }  
-
   .block-side-ad {
     height: 120px;
-    width: 30%
+    width: 30%;
   }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 800px) { /*3 barres l'une en dessous de l'autre au dessus du bloc hébergement*/
-  .block-popular {
-    background:red;
-  }  
-
   .block-side-ad {
     height: 150px;
-    width: 95%
+    width: 95%;
   }
 }
 
@@ -454,7 +441,14 @@ header {
   color: black;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1250px) {
+  .container-ads {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 240px 240px;
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1250px) {
   .container-ads {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 288px 288px;
