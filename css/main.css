@@ -84,6 +84,15 @@ main {
 }
 
 
+.img-small-icon {
+  height: 20px;
+  width: auto;
+  
+  vertical-align:middle;
+  
+  float: left;
+  margin-right: 16px;
+}
 
 
 
@@ -225,11 +234,11 @@ header {
   float: left;
   
   height: 50px;
-  height: 50px;
+  width: auto;
 }
 
 .imgGetPosition {
-  margin: 15px; /* haut | droit | bas | gauche */
+  margin: 15px; 
   width: 20px;
   height: 20px;
 }
@@ -237,17 +246,6 @@ header {
 /* ------------------------------------------------------------ */ 
 /* -------------------------- Filter -------------------------- */
 /* ------------------------------------------------------------ */
-
-.img-small-icon {
-  height: 20px;
-  width: auto;
-  
-  vertical-align:middle;
-  
-  float: left;
-  margin-right: 0.5rem;
-
-}
 
 .flexbox-filter {
   display: flex;
@@ -264,9 +262,11 @@ header {
   background: white;
   border: solid 2px;;
   border-color: lightgrey;
-  border-radius: 25px;
-  margin: 8px 0 8px 16px;
-  padding: 8px 16px 8px 8px;
+  border-radius: 100px;
+  margin: 8px 0px 8px 16px; /* haut | droite | bas | gauche */
+  padding: 12px 16px 12px 12px;
+  cursor: pointer;
+
 }
 
 .block-filter-search:hover {
@@ -274,6 +274,20 @@ header {
   transform: scale(1.05);
   background: rgba(0, 100, 215,0.1);
 }
+
+.back-img-icon-filter {
+  background: red;
+  float: left;
+}
+
+.img-icon-filter {
+  height: 20px;
+  width: auto;
+  
+  vertical-align:middle;
+  margin-right: 16px;
+}
+
 
 @media (max-width: 600px) {
   .flexbox-filter {
@@ -329,6 +343,9 @@ header {
   background: white;
   margin: 5px;
   padding: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px lightgrey;
+  text-decoration: none;
 
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -352,6 +369,11 @@ header {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   object-fit: cover;
+}
+
+.namePopular {
+  font-size: medium;
+  color: black;
 }
 
 
