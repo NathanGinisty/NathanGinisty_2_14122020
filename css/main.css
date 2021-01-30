@@ -139,14 +139,13 @@ p {
 }
 
 /* Other tools */
-section,div {
-  margin-top: 5px;
+section, div {
+  margin-top: 0px;
 }
 
 .block { /* base that most block uses */
   background: whitesmoke;
-  margin: 1rem 1rem 1rem 0;
-  padding: 1rem;
+  padding: 16px;
   border-radius: 10px;
   box-shadow: 2px 2px 5px lightgrey;
 }
@@ -406,7 +405,7 @@ header {
 @media only screen and (min-width: 1250px) {
   .all-hebergements {
     grid-template-columns: 2fr 1fr;
-    column-gap: 0px;
+    column-gap: 24px;
   }
   
   .block:first-child {
@@ -418,7 +417,7 @@ header {
 @media only screen and (min-width: 0px) and (max-width: 1250px) {
   .all-hebergements {
     grid-template-columns: 1fr;
-    row-gap: 0px;
+    row-gap: 24px;
   }
 }
 
@@ -589,7 +588,7 @@ header {
 /* ------------------------------------------------------------ */
 
 .activity {
-  margin: 32px 0 0 0;
+  margin-top: 36px;
   display: grid;
   text-decoration: none;
 }
@@ -715,6 +714,10 @@ footer {
 .nav-footer a {
   color: black;
   text-decoration: none;
+}
+
+.nav-footer a:hover {
+  text-decoration: underline;
 }
 
 .flexbox-footer {
