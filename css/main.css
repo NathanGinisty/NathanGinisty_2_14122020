@@ -286,7 +286,7 @@ header {
   border-color: rgb(238, 238, 238);
   border-radius: 15px;
   margin: 16px 0;
-
+  
   width: 460px;
 }
 
@@ -295,7 +295,7 @@ header {
   font-size: 16px;
   font-weight: bold;
   border: none;
-
+  
   width: 280px;
   height: 50px;
 }
@@ -333,31 +333,31 @@ header {
 }
 
 @media only screen and (min-width: 426px) and (max-width: 600px) {
-
+  
   .search-bar {
     width: 100%;
   }
-
+  
   .search-bar input[type=search] {
     width: 55%;
   }
-
+  
   .search-bar button {
     width: 30%;
   }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 425px) {
-
+  
   .search-bar {
     width: 100%;
   }
-
+  
   .search-bar input[type=search] {
     width: 50%;
     font-size: 12px;
   }
-
+  
   .search-bar button {
     width: 30%;
     font-size: 12px;
@@ -551,6 +551,9 @@ header {
   
   display: flex;
   flex-direction: column;
+  
+  position: relative;
+  z-index: 10;
 }
 
 .img-ad {
