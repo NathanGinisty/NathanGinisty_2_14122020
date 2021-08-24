@@ -541,8 +541,8 @@ header {
 
 .block-ad {
   background: white;
-  margin: 1rem 1rem 1rem 0;
-  padding: 1rem;
+  margin: 16px 16px 16px 0;
+  padding: 16px;
   border-radius: 10px;
   box-shadow: 2px 2px 5px lightgrey;
   margin: 10px;
